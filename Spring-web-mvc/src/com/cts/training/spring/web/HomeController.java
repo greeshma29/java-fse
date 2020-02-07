@@ -1,0 +1,22 @@
+package com.cts.training.spring.web;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+       @Controller
+      public class HomeController {
+	    @RequestMapping("/")
+	       public String home() {
+		
+		return "home-page";
+		
+	}
+	    
+	   // @RequestMapping("/test")
+	    @RequestMapping(value= {"/index","/test"})
+	    public String view()
+	    {
+	    	return "view-page";
+	    }
+	    
+}
